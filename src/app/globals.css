@@ -4,23 +4,23 @@
 
 @layer base {
   :root {
-    --background: 210 12% 5%; /* Cathode Black */
-    --foreground: 210 17% 82%; /* Lithium Silver */
+    --background: 195 23% 4%; /* #0B0D10 Cathode Black */
+    --foreground: 216 13% 76%; /* #A7B0BF Lithium Silver */
 
-    --card: 216 19% 11%; /* Graphite */
-    --card-foreground: 210 17% 82%; /* Lithium Silver */
+    --card: 216 19% 11%; /* #141820 Graphite */
+    --card-foreground: 216 13% 76%;
 
     --popover: 216 19% 11%;
-    --popover-foreground: 210 17% 82%;
+    --popover-foreground: 216 13% 76%;
 
-    --primary: 207 100% 61%; /* Ion Blue */
+    --primary: 207 100% 61%; /* #3AA0FF Ion Blue */
     --primary-foreground: 216 19% 11%;
 
-    --secondary: 171 100% 41%; /* Plasma Teal */
+    --secondary: 171 100% 41%; /* #00D1B2 Plasma Teal */
     --secondary-foreground: 216 19% 11%;
     
     --muted: 216 19% 11%;
-    --muted-foreground: 210 17% 65%;
+    --muted-foreground: 216 13% 60%;
 
     --accent: 216 19% 15%;
     --accent-foreground: 210 17% 90%;
@@ -36,23 +36,23 @@
   }
 
   .dark {
-    --background: 210 12% 5%; /* Cathode Black */
-    --foreground: 210 17% 82%; /* Lithium Silver */
+    --background: 220 18% 5%;
+    --foreground: 216 13% 76%;
 
-    --card: 216 19% 11%; /* Graphite */
-    --card-foreground: 210 17% 82%; /* Lithium Silver */
+    --card: 220 14% 9%;
+    --card-foreground: 216 13% 76%;
 
-    --popover: 216 19% 11%;
-    --popover-foreground: 210 17% 82%;
+    --popover: 220 14% 9%;
+    --popover-foreground: 216 13% 76%;
 
-    --primary: 207 100% 61%; /* Ion Blue */
+    --primary: 207 100% 61%;
     --primary-foreground: 216 19% 11%;
 
-    --secondary: 171 100% 41%; /* Plasma Teal */
+    --secondary: 171 100% 41%;
     --secondary-foreground: 216 19% 11%;
     
-    --muted: 216 19% 11%;
-    --muted-foreground: 210 17% 65%;
+    --muted: 220 14% 9%;
+    --muted-foreground: 216 13% 60%;
 
     --accent: 216 19% 15%;
     --accent-foreground: 210 17% 90%;
@@ -72,6 +72,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-color: #0B0D10;
   }
 }
 
@@ -80,7 +81,8 @@
 }
 
 .gradient-button {
-  @apply bg-gradient-to-r from-primary to-secondary text-primary-foreground;
+  background-image: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
+  @apply text-primary-foreground;
 }
 
 .glow-on-hover {
@@ -88,5 +90,5 @@
 }
 
 .glow-on-hover:hover {
-  box-shadow: 0 0 15px 2px hsl(var(--primary) / 0.5), 0 0 15px 2px hsl(var(--secondary) / 0.5);
+  box-shadow: 0 0 15px -2px hsl(var(--primary) / 0.6), 0 0 15px -2px hsl(var(--secondary) / 0.6);
 }

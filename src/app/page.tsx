@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Bot, Code, LineChart, Cpu, Zap } from "lucide-react";
+import { ArrowRight, Bot, Code, LineChart, Cpu } from "lucide-react";
 import Link from 'next/link';
 
 const coreOfferings = [
@@ -101,7 +101,7 @@ export default function Home() {
         <section className="py-16 md:py-24">
           <div className="container px-4 md:px-6">
             <div className="relative overflow-hidden">
-                <div className="flex animate-marquee-infinite">
+                <div className="flex animate-marquee">
                   {logos.concat(logos).map((logo, i) => (
                       <div key={i} className="mx-8 flex items-center justify-center">
                           <span className="text-2xl font-bold text-muted-foreground/50">{logo}</span>
@@ -144,4 +144,3 @@ export default function Home() {
     </div>
   );
 }
-
